@@ -6,7 +6,7 @@ const Textareaarrow = () => {
     <div>
 
         <i className="ri-arrow-right-up-line arrow"></i>
-        < RiArrowRightUpLine size={64} className="text-[5rem] font-medium"/>
+        < RiArrowRightUpLine size={72} className="text-[5rem] font-medium"/>
       
     </div>
   )
