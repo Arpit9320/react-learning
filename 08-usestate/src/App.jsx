@@ -3,20 +3,16 @@ import { useState } from "react"
 
 const App = () => {
   
-  let [user, setUser] = useState([10, 20, 30, 40]);
+  let [user, setUser] = useState({user:"Kamlesh", age: "40"});
 
   let UserChange = () =>{
-    let newuser = [...user]
-    newuser.pop()
-    setUser(newuser)
-    console.log(newuser)
-    console.log(user)
+    setUser(prev=>({...prev, age:60}))
   
   }
 
   return (
     <div>
-      <h1>{user}</h1>
+      <h1>{user.user}, {user.age}</h1>
       <button onClick={UserChange}>Click</button>
     </div>
   )
