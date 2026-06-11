@@ -76,7 +76,7 @@ const App = () => {
             <p className='leading-tight text-xs font-semibold text-gray-600'>{obj.description}</p>
 
             <div>
-              <button className='absolute bottom-0 right-0 w-fit cursor-pointer px-2 bg-red-500 py-1 text-xs rounded font-bold text-white'
+              <button className='absolute bottom-0 right-0 w-fit border-none cursor-pointer px-2 bg-red-500 py-1 text-xs rounded font-bold'
                 onClick={() =>
                   
                   deleteNote(idx)
