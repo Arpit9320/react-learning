@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.card-holder::-webkit-scrollbar{
+    width: 4px;
+}
+
+.card-holder::-webkit-scrollbar-thumb{
+    background-color: rgb(100, 100, 100);
+    border-radius: 30px;
+    
+}
+
+.text-area::-webkit-scrollbar{
+    width: 4px;
+    /* margin: 20px; */
+}
+
+.text-area::-webkit-scrollbar-track {
+    margin: 8px 0;
+}
+
+.text-area::-webkit-scrollbar-thumb{
+    background-color: rgb(100, 100, 100);
+    border-radius: 20px;
+    border: 4px solid transparent;
+}
+
