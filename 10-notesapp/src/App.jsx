@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const App = () => {
 
-  let [task, setTask] = useState([{heading: "create your note", description: ""}])
+  let [task, setTask] = useState(JSON.parse(localStorage.getItem("notes")) || [{heading: "create your note", description: ""}])
 
   let [title, setTitle] = useState('')
   let [desc, setDesc] = useState('')
@@ -29,10 +29,11 @@ const App = () => {
 
     setTask(copyTask)
 
-   
+    localStorage.setItem("notes", JSON.stringify(task))
 
   }
 
+  localStorage.setItem("notes", JSON.stringify(task))
   
   return (
     <div className=' min-h-screen bg-black w-full lg:flex text-white '>
