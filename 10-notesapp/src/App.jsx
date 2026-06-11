@@ -22,7 +22,16 @@ const App = () => {
     setDesc('')
   }
 
+  const deleteNote = (idx) =>{
+    let copyTask = [...task]
 
+    copyTask.splice(idx, 1)
+
+    setTask(copyTask)
+
+   
+
+  }
 
   
   return (
@@ -61,11 +70,18 @@ const App = () => {
 
           {task.map(function(obj, idx){
 
-            return <div key = {idx} className="w-40 h-52 bg-cover rounded-xl text-black pt-9 pb-4 px-4 bg-[url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')]">
+            return <div key = {idx} className=" relative w-40 h-52 bg-cover rounded-xl text-black pt-9 pb-4 px-4 bg-[url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png')]">
             <h3 className='leading-tight text-lg font-bold'>{obj.heading}</h3>
             <p className='leading-tight text-xs font-semibold text-gray-600'>{obj.description}</p>
 
-            
+            <div>
+              <button className='absolute bottom-0 right-0 w-fit cursor-pointer px-2 bg-red-500 py-1 text-xs rounded font-bold text-white'
+                onClick={() =>
+                  
+                  deleteNote(idx)
+                } 
+              >Delete</button>
+            </div>
             
           </div>
           
