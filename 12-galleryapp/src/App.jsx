@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Cards from './components/Cards'
 
 const App = () => {
 
@@ -22,14 +23,7 @@ const App = () => {
   if(userData.length > 0){
     renderUI = userData.map((obj, idx)=>{
       return(
-        <div>
-          <a href={obj.url} target='_blank'>
-            <div className='h-40 w-44 overflow-hidden rounded-xl'>
-              <img src= {obj.download_url} alt="" key={idx} className='w-full h-full object-cover' loading='lazy' />
-            </div>
-            <h3 className='text-xl'>{obj.author}</h3>
-          </a>
-        </div>
+        <Cards obj={obj} key={idx}/>
       )
     })
   }
