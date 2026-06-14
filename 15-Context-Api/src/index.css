@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height:100vh;
+    width: 100%;
+}
+
+.main{
+    height:100vh;
+    width: 100%;
+}
+
+.navbar{
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vw;
+    padding: 20px;
+}
+
+.btn{
+    padding: 8px;
+    background-color: darkcyan;
+    margin-top: 2vw;
+    border: none;
+    margin-left: 45vw;
+    border-radius: 8px;
+    font-size: 2vw;
+}
+
+.Dark{
+    background-color: black;
+}
+
+.Light{
+    background-color: white;
+}
